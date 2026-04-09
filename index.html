@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Tech | Future of Agriculture</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9fbf9;
+        }
+
+        /* Navigation with Tech Logo */
+        nav {
+            background: #0f2d0c;
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 35px;
+            height: 35px;
+            fill: #76ff03;
+        }
+
+        .logo-text {
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            text-transform: uppercase;
+        }
+
+        .logo-text span {
+            color: #76ff03;
+            font-weight: 300;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+        }
+
+        nav ul li { margin-left: 25px; }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover { color: #76ff03; }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(15, 45, 12, 0.7), rgba(15, 45, 12, 0.7)), 
+                        url('https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 { font-size: 3.5rem; margin-bottom: 10px; }
+
+        /* Grid and Cards */
+        section { padding: 80px 10%; }
+
+        .section-title { text-align: center; margin-bottom: 50px; }
+
+        .section-title h2 { color: #0f2d0c; font-size: 2.5rem; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            overflow: hidden;
+            transition: transform 0.4s ease;
+        }
+
+        .card:hover { transform: translateY(-10px); }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .card-content { padding: 25px; }
+
+        .btn {
+            background: #2e7d32;
+            color: white;
+            padding: 14px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+            box-shadow: 0 10px 50px rgba(0,0,0,0.05);
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+        }
+
+        footer { background: #0a1a08; color: #888; text-align: center; padding: 40px 0; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-container">
+            <svg class="logo-icon" viewBox="0 0 24 24">
+                <path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z" />
+            </svg>
+            <div class="logo-text">Farm<span>Tech</span></div>
+        </div>
+        <ul>
+            <li><a href="#about">Innovation</a></li>
+            <li><a href="#products">Marketplace</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>Cultivating the Future</h1>
+        <p>Smart data. Precision farming. Real flavor.</p>
+        <br>
+        <a href="#products" class="btn">View Our Harvest</a>
+    </header>
+
+    <section id="products" style="background-color: #f2f7f2;">
+        <div class="section-title">
+            <h2>Current Marketplace</h2>
+        </div>
+        <div class="grid">
+            
+            <!-- SMART GROWN VEGGIES WITH YOUR IMAGE -->
+            <div class="card">
+                <img src="veggies.jpeg" alt="Smart-Grown Veggies">
+                <div class="card-content">
+                    <h3>Smart-Grown Veggies</h3>
+                    <p>Grown in climate-controlled environments for maximum nutrient density and variety.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=600&q=80" alt="Organic Fruits">
+                <div class="card-content">
+                    <h3>Bio-Organic Fruits</h3>
+                    <p>Naturally pollinated orchard fruits monitored for peak sugar content.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1506976785307-8732e854ad03?auto=format&fit=crop&w=600&q=80" alt="Farm Fresh Eggs">
+                <div class="card-content">
+                    <h3>Precision-Fed Eggs</h3>
+                    <p>High-quality eggs from hens raised in high-tech, stress-free habitats.</p>
+                </div>
+            </div>
+
+            <!-- RAW DIGITAL HONEY WITH YOUR IMAGE -->
+            <div class="card">
+                <img src="honey.jpeg" alt="Raw Digital Honey">
+                <div class="card-content">
+                    <h3>Raw Digital Honey</h3>
+                    <p>Extracted from sensor-managed hives ensuring the purest wildflower essence.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-container">
+            <h2 style="text-align: center;">Get Support</h2>
+            <form>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <textarea rows="5" placeholder="Inquiry details..."></textarea>
+                <button type="submit" class="btn" style="width: 100%; cursor: pointer; border:none;">Initialize Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 FARM TECH SOLUTIONS. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
